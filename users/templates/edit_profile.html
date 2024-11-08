@@ -10,10 +10,10 @@
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Edit Details</h1>
+                <h1>Editar Detalles</h1>
                 <nav class="d-flex align-items-center">
-                    <a href="{% url 'home' %}">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="{% url 'edit_profile' %}">View profile</a>
+                    <a href="{% url 'home' %}">Inicio<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="{% url 'edit_profile' %}">Ver Perfil</a>
                 </nav>
             </div>
         </div>
@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h3 class="p-4">Edit Details</h3>
+            <h3 class="p-4">Editar Perfil</h3>
             <form class="row contact_form mb-5 pb-5" method="post" novalidate="novalidate" style="color: #0b0b0b">
                 {% csrf_token %}
                 <div class="col-md-6 form-group p_star">
@@ -51,7 +51,7 @@
 
                 </div>
 
-                <h3 class="p-4">Shipping Address</h3>
+                <h3 class="p-4">Direccion de Envio</h3>
                 <div class="col-md-12 form-group p_star">
                     {{form.address_one}}
                     <div class='error text-danger'>{{form.address_one.errors}}</div>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-md-6 form-group">
-                    <button type="submit" value="submit" class="primary-btn">Save</button>
+                    <button type="submit" value="submit" class="primary-btn">Guardar</button>
                 </div>
 
             </form>
