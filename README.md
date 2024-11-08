@@ -74,19 +74,6 @@ Navigate to http://127.0.0.1:8000/
 
 
 
-## **Create an account on stripe for accepting payments**
-
-````
- https://dashboard.stripe.com/settings/account?support_details=true
-````
-
-##  Note: **For payment integration using stripe, add stripe required keys in .env file. You can get them from stripe Dashboard.**
-
-````
-https://dashboard.stripe.com/test/dashboard
-````
-
-
 
 
 
