@@ -132,3 +132,6 @@ dmypy.json
 .idea
 users/migrations
 store/migrations
+
+# ignore requeriments
+requeriments.txt
