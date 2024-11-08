@@ -73,8 +73,6 @@ python manage.py runserver
 Navigate to http://127.0.0.1:8000/
 
 
-![alt text](https://github.com/rutvi-mi/django_ecommerce_boilerplate/blob/main/ecommerce.gif)
-
 
 ## **Create an account on stripe for accepting payments**
 
