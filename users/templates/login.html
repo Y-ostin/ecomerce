@@ -5,66 +5,67 @@
 
 {% block content %}
 
-    <!-- Start Banner Area -->
-    <section class="banner-area organic-breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-                <div class="col-first">
-                    <h1>Login</h1>
-                    <nav class="d-flex align-items-center">
-                        <a href="{% url 'home' %}">Inicio<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="{% url 'login' %}">Ingresar</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Banner Area -->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
 
-    <!--================Register Box Area =================-->
-    <section class="login_box_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="login_box_img">
-                        <img class="img-fluid" src="{% static 'img/login.jpg' %}" alt="">
-                        <div class="hover">
-                            <h4>Aún no tienes cuenta?</h4>
-                            <p>Los Productos que se encuentran es este e-comerce son las ultimas tendencias en cada ambito</p>
-                            <a class="primary-btn" href="{% url 'register' %}">Registrarse</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="login_form_inner">
-                        <h3>Login</h3>
-                        <form class="row login_form" method="post" id="contactForm" novalidate="novalidate">
-                            {% csrf_token %}
-                            {% include 'base_message.html' %}
-                            <div class="col-md-12 form-group">
-                                {{ form.username }}
-                                <div class='error text-danger'>{{ form.username.errors }}</div>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                {{ form.password }}
-                                <div class='error text-danger'>{{ form.password.errors }}</div>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <button type="submit" value="submit" class="primary-btn">Login</button>
-                            </div>
-                            <p class="pt-4 pl-4">Aún no tienes cuenta?<a href="{% url 'register' %}">&nbsp;Crear una</a></p>
-                            <p class="pt-4 pl-4"><a href="{% url 'forgot_password' %}">Olvidaste la Contraseña?</a></p>
-                        </form>
+                <h1>Iniciar Sesión</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+<!--================Register Box Area =================-->
+<section class="login_box_area section_gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="login_box_img">
+                    <img class="img-fluid" src="{% static 'img/login.jpg' %}" alt="">
+                    <div class="hover">
+                        <h4>Aún no tienes cuenta?</h4>
+                        <p>Los Productos que se encuentran es este e-comerce son las ultimas tendencias en cada ambito</p>
+                        <a class="primary-btn" href="{% url 'register' %}">Registrarse</a>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6">
+                <div class="login_form_inner">
+                    <h3>Iniciar Sesión</h3>
+                    <form class="row login_form" method="post" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %}
+                        {% include 'base_message.html' %}
+                        <div class="col-md-12 form-group">
+                            {{ form.username }}
+                            <div class='error text-danger'>{{ form.username.errors }}</div>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            {{ form.password }}
+                            <div class='error text-danger'>{{ form.password.errors }}</div>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <button type="submit" value="submit" class="primary-btn">Login</button>
+                        <div class="col-md-12 form-group text-center">
+                            <p class="pt-4">
+                                Aún no tienes cuenta? <a href="{% url 'register' %}">Crear una</a>
+                            </p>
+                            <p class="pt-2">
+                                <a href="{% url 'forgot_password' %}">Olvidaste la Contraseña?</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </section>
-    <!--================End Register Box Area =================-->
+    </div>
+</section>
+<!--================End Register Box Area =================-->
 
 {% endblock content %}
 
 {% block javascript %}
-
-
+<link rel="stylesheet" href="{% static 'css/login/style.css' %}">
 {% endblock javascript %}

@@ -1,0 +1,169 @@
+/* Estilos generales para el área de login */
+.login_box_area {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.login_box_img img {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login_box_img:hover img {
+    transform: scale(1.05);
+}
+
+.hover h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.hover p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Animaciones adicionales para el botón principal */
+.primary-btn {
+    color: #fff !important;
+    background-color: #ff5a00;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Efecto de rebote y sombra en hover */
+.primary-btn:hover {
+    background-color: #e04e00;
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de rebote al hacer clic */
+.primary-btn:active {
+    transform: scale(0.95) translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para los enlaces */
+.login_form a {
+    color: #ff5a00;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.login_form a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #ff5a00;
+    transition: width 0.3s;
+}
+
+.login_form a:hover {
+    color: #e04e00;
+    transform: translateY(-2px);
+}
+
+.login_form a:hover::after {
+    width: 100%;
+}
+
+/* Estilos y animación para el formulario */
+.login_form_inner {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login_form_inner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.login_form h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilos para los inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #ff5a00;
+    outline: none;
+}
+
+/* Estilos para mensajes de error */
+.error.text-danger {
+    font-size: 14px;
+    color: #d9534f;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-area,
+.login_box_area,
+.login_form_inner {
+    animation: fadeInUp 0.5s ease both;
+}
+
+/* Estilos para los enlaces de registro y recuperación de contraseña */
+.form-group.text-center p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.form-group.text-center a {
+    color: #ff5a00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-group.text-center a:hover {
+    color: #e04e00;
+}
+
+.form-group.text-center p + p {
+    margin-top: 8px;
+}
