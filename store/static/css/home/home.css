@@ -1,0 +1,140 @@
+/* Estilos para la sección de productos */
+.section-title h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeInDown 1s ease;
+  }
+  
+  .single-product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .single-product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animación de zoom para imágenes de productos */
+  .single-product img {
+    transition: transform 0.4s ease;
+  }
+  
+  .single-product:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Efecto de rotación en los logos de las marcas */
+  .brand-area img {
+    opacity: 0.7;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    animation: rotateIn 1s ease;
+  }
+  
+  .brand-area img:hover {
+    opacity: 1;
+    transform: rotate(10deg) scale(1.05);
+  }
+  
+  /* Animación de entrada para las características */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-15deg) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  
+  .section-title,
+  .product-details,
+  .single-features {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .product-details h6 {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .product-details .price h6 {
+    font-size: 1.5rem;
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  /* Animación para cada característica */
+  .features-inner .single-features {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+    transform: translateY(20px);
+  }
+  
+  .features-inner .single-features:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .features-inner .single-features:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .features-inner .single-features:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .features-inner .single-features:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  /* Efecto de "pop" en el botón de añadir al carrito */
+  .update-cart {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .update-cart:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+  }
+  
+  /* Animación de productos */
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -69,9 +69,9 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'e-comerce',  # Asegúrate de que sea el nombre correcto
-        'USER': 'Admin',                     # Usuario
-        'PASSWORD': '123',            # Asegúrate de que sea la contraseña correcta
+        'NAME': 'postgres',  # Asegúrate de que sea el nombre correcto
+        'USER': 'postgres',                     # Usuario
+        'PASSWORD': '1',            # Asegúrate de que sea la contraseña correcta
         'HOST': 'localhost',                    # Generalmente localhost
         'PORT': '5432',                         # Asegúrate de que este sea el puerto correcto
     }
