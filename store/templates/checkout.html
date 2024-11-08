@@ -85,12 +85,12 @@
                                 {% for item in items %}
                                     <li><a href="#">{{ item.product.name }}<span
                                             class="middle">x {{ item.quantity }}</span>
-                                        <span class="last">&#8377; {{ item.get_total|number_format }}</span></a></li>
+                                        <span class="last">S/{{ item.get_total|number_format }}</span></a></li>
                                 {% endfor %}
                             </ul>
 
                             <ul class="list list_2">
-                                <li><a href="#">Total <span>&#8377; {{ sum|number_format }} </span></a></li>
+                                <li><a href="#">Total <span>S/{{ sum|number_format }} </span></a></li>
                             </ul>
                             {% if product_id > 0 %}
                                 <a class="primary-btn removeCartItem" data-toggle="modal" data-target="#myModal"

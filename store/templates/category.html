@@ -14,7 +14,7 @@
 			<div class="col-first">
 				<h1>Categorias y Productos</h1>
 				<nav class="d-flex align-items-center">
-					<a href="{% url 'home' %}">Iniio<span class="lnr lnr-arrow-right"></span></a>
+					<a href="{% url 'home' %}">Inicio<span class="lnr lnr-arrow-right"></span></a>
 					<a href="{% url 'categories' %}">Categorias de Productos</a>
 				</nav>
 			</div>
@@ -63,7 +63,7 @@
 								<h6>{{product.name}}</h6>
 								<h6>{{product.brand.name}}</h6>
 								<div class="price">
-									<h6><span>&#8377; </span>{{product.price|number_format}}</h6>
+									<h6><span>S/</span>{{product.price|number_format}}</h6>
 								</div>
 
 								<div class="prd-bottom">
