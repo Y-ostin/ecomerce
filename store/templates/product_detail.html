@@ -33,7 +33,7 @@
                 <div class="s_product_text">
                     <h3>{{product.name}}</h3>
                     <h3>{{product.brand.name}}</h3>
-                    <h2><span>S/</span>{{product.price}}</h2>
+                    <h2><span>S/ </span>{{product.price}}</h2>
                     <ul class="list">
                         <li><span><h4>Categoria:</h4></span> {{product.category.name}}</li>
                     </ul>
@@ -77,6 +77,70 @@
             {% endfor %}
         </div>
     </section>
-</div>
+</div><!--================Start Comment Section =================-->
+<section class="comment-section mt-5">
+    <div class="container">
+        <h3 class="text-center">Comentarios</h3>
+        <div class="row">
+            <!-- Comment Form -->
+            <div class="col-lg-6">
+                <h4>Deja tu Comentario</h4>
+                <form id="comment-form">
+                    <div class="form-group">
+                        <label for="comment-name">Nombre</label>
+                        <input type="text" class="form-control" id="comment-name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Comentario</label>
+                        <textarea class="form-control" id="comment-text" rows="4" placeholder="Escribe tu comentario aquí" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+                </form>
+            </div>
+
+            <!-- Display Comments -->
+            <div class="col-lg-6">
+                <h4>Comentarios Recientes</h4>
+                <div class="comment">
+                    <h6><strong>Juan Pérez</strong> <small>Hace 2 horas</small></h6>
+                    <p>Este producto es excelente, lo recomiendo mucho.</p>
+                </div>
+                <div class="comment">
+                    <h6><strong>Ana María</strong> <small>Hace 1 día</small></h6>
+                    <p>La calidad es buena, pero el precio podría ser más bajo.</p>
+                </div>
+                <div class="comment">
+                    <h6><strong>Carlos Sánchez</strong> <small>Hace 3 días</small></h6>
+                    <p>No me convenció, el envío fue muy lento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Comment Section =================-->
+
+<!-- JavaScript to handle form submission and clear fields -->
+<script>
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the form inputs
+        var name = document.getElementById('comment-name').value;
+        var comment = document.getElementById('comment-text').value;
+
+        // Check if both fields are filled
+        if (name && comment) {
+            // Simulate adding the comment (you can later integrate with your backend)
+            alert("Comentario enviado por " + name);
+            
+            // Clear the form fields after submission
+            document.getElementById('comment-name').value = '';
+            document.getElementById('comment-text').value = '';
+        } else {
+            alert("Por favor, completa ambos campos.");
+        }
+    });
+</script>
+
 
 {% endblock %}
