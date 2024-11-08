@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %}Edit Profile{% endblock title %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Edit Details</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="{% url 'home' %}">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="{% url 'edit_profile' %}">View profile</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h3 class="p-4">Edit Details</h3>
+            <form class="row contact_form mb-5 pb-5" method="post" novalidate="novalidate" style="color: #0b0b0b">
+                {% csrf_token %}
+                <div class="col-md-6 form-group p_star">
+                    {{ form.first_name }}
+                    <div class='error text-danger'>{{form.first_name.errors}}</div>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    {{ form.last_name }}
+                    <div class='error text-danger'>{{form.last_name.errors}}</div>
+                </div>
+                <div class="col-md-6 form-group">
+                    {{ form.username }}
+                    <div class='error text-danger'>{{form.username.errors}}</div>
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    {{form.mobile_no}}
+                    <div class='error text-danger'>{{form.mobile_no.errors}}</div>
+
+                </div>
+                <div class="col-md-6 form-group p_star">
+                    {{form.alt_mobile_no}}
+                    <div class='error text-danger'>{{form.alt_mobile_no.errors}}</div>
+
+                </div>
+
+                <h3 class="p-4">Shipping Address</h3>
+                <div class="col-md-12 form-group p_star">
+                    {{form.address_one}}
+                    <div class='error text-danger'>{{form.address_one.errors}}</div>
+
+                </div>
+                <div class="col-md-12 form-group p_star">
+                    {{form.address_two}}
+                    <div class='error text-danger'>{{form.address_two.errors}}</div>
+                </div>
+
+                <div class="col-md-12 form-group p_star">
+                    {{form.zipcode}}
+                    <div class='error text-danger'>{{form.zipcode.errors}}</div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                    <button type="submit" value="submit" class="primary-btn">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
