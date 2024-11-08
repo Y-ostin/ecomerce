@@ -30,7 +30,7 @@ $ source venv/bin/activate
 
 You will see in front of the prompt that the virtual environment (venv) has been activated.
 
-Install the dependencies:
+instala las dependencias
 
 ````
 $ pip install -r requirements.txt
@@ -72,21 +72,6 @@ python manage.py runserver
 
 Navigate to http://127.0.0.1:8000/
 
-
-![alt text](https://github.com/rutvi-mi/django_ecommerce_boilerplate/blob/main/ecommerce.gif)
-
-
-## **Create an account on stripe for accepting payments**
-
-````
- https://dashboard.stripe.com/settings/account?support_details=true
-````
-
-##  Note: **For payment integration using stripe, add stripe required keys in .env file. You can get them from stripe Dashboard.**
-
-````
-https://dashboard.stripe.com/test/dashboard
-````
 
 
 
