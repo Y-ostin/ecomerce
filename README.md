@@ -30,7 +30,7 @@ $ source venv/bin/activate
 
 You will see in front of the prompt that the virtual environment (venv) has been activated.
 
-Install the dependencies:
+instala las dependencias
 
 ````
 $ pip install -r requirements.txt
