@@ -8,11 +8,7 @@
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Registrase</h1>
-                <nav class="d-flex align-items-center">
-                    <a href="{% url 'home' %}">Inicio<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="{% url 'register' %}">Registrarse</a>
-                </nav>
+                <h1>Registrarse</h1>
             </div>
         </div>
     </div>
@@ -23,53 +19,56 @@
 <section class="login_box_area section_gap">
     <div class="container">
         <div class="row">
+            <!-- Imagen de registro (igual a la de login) -->
             <div class="col-lg-6">
                 <div class="login_box_img">
-                    <img class="img-fluid" src="{% static 'img/login.jpg' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/login.jpg' %}" alt="Imagen de registro">
                     <div class="hover">
-                        <h4>Aún no tienes una cuenta?</h4>
-                        <p>Los Productos que se encuentran es este e-comerce son las ultimas tendencias en cada ambito</p>
+                        <h4>¿Ya tienes una cuenta?</h4>
+                        <p>Los productos en este e-commerce son las últimas tendencias en cada ámbito.</p>
                         <a class="primary-btn" href="{% url 'login' %}">Ingresar</a>
                     </div>
                 </div>
             </div>
+            <!-- Formulario de registro -->
             <div class="col-lg-6">
-                <div class="login_form_inner p-1">
+                <div class="login_form_inner">
                     <h3>Registrarse</h3>
-                    <form class="row register_form" method="post" id="contactForm" novalidate="novalidate">
+                    <form class="row login_form" method="post" id="contactForm" novalidate="novalidate">
                         {% csrf_token %}
-
+                        
                         <div class="col-md-12 form-group">
                             {{ form.username }}
-                            <div class='error text-danger'>{{form.username.errors}}</div>
-
+                            <div class="error text-danger">{{ form.username.errors }}</div>
                         </div>
 
                         <div class="col-md-12 form-group">
                             {{ form.password1 }}
-                            <div class='error text-danger'>{{form.password1.errors}}</div>
-
+                            <div class="error text-danger">{{ form.password1.errors }}</div>
                         </div>
-                         <div class="col-md-12 form-group">
+
+                        <div class="col-md-12 form-group">
                             {{ form.password2 }}
-                            <div class='error text-danger'>{{form.password2.errors}}</div>
-
+                            <div class="error text-danger">{{ form.password2.errors }}</div>
                         </div>
+
                         <div class="col-md-12 form-group">
                             {{ form.mobile_no }}
-                            <div class='error text-danger'>{{form.mobile_no.errors}}</div>
-
+                            <div class="error text-danger">{{ form.mobile_no.errors }}</div>
                         </div>
+
                         <div class="col-md-12 form-group">
                             {{ form.alt_mobile_no }}
-                            <div class='error text-danger'>{{form.alt_mobile_no.errors}}</div>
-
+                            <div class="error text-danger">{{ form.alt_mobile_no.errors }}</div>
                         </div>
 
                         <div class="col-md-12 form-group">
                             <button type="submit" value="submit" class="primary-btn">Registrarse</button>
                         </div>
-                        <p class="pt-4 pl-4">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresar</a></p>
+                        
+                        <div class="col-md-12 text-center">
+                            <p class="pt-4">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresar</a></p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -79,3 +78,7 @@
 <!--================End Register Box Area =================-->
 
 {% endblock content %}
+
+{% block javascript %}
+<link rel="stylesheet" href="{% static 'css/login/style.css' %}">
+{% endblock javascript %}
