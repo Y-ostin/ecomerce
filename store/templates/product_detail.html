@@ -9,10 +9,10 @@
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Product Details Page</h1>
+                <h1>Detalles del Producto</h1>
                 <nav class="d-flex align-items-center">
-                    <a href="{% url 'home' %}">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="#">Product-details</a>
+                    <a href="{% url 'home' %}">inicio<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="#">Detalles del Producto</a>
                 </nav>
             </div>
         </div>
@@ -35,12 +35,12 @@
                     <h3>{{product.brand.name}}</h3>
                     <h2><span>&#8377; </span>{{product.price}}</h2>
                     <ul class="list">
-                        <li><span><h4>Category:</h4></span> {{product.category.name}}</li>
+                        <li><span><h4>Categoria:</h4></span> {{product.category.name}}</li>
                     </ul>
                     <p>{{product.description}}</p>
                     <div class="prd-bottom">
                         <button data-id="{{product.id}}" data-action='add' data-image="{{product.image}}" data-price="{{product.price}}"
-                                class="primary-btn update-cart">Add to <span class="ti-bag"></span></button>
+                                class="primary-btn update-cart">Añadir<span class="ti-bag"></span></button>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
 <!--================End Single Product Area =================-->
 
 <div class="container my-5 py-5">
-    <h1 class="text-center ">Similar Products</h1>
+    <h1 class="text-center ">Productos Similares</h1>
     <section class="lattest-product-area pb-40 category-list">
         <div class="row mx-auto">
 
@@ -69,7 +69,7 @@
                         </div>
                         <div class="prd-bottom">
                         <button data-id="{{product.id}}" data-action='add' data-image="{{product.image}}" data-price="{{product.price}}"
-                                class="primary-btn update-cart">Add to <span class="ti-bag"></span></button>
+                                class="primary-btn update-cart">Añadir <span class="ti-bag"></span></button>
                         </div>
                     </div>
                 </div>

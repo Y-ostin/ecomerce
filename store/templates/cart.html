@@ -31,9 +31,9 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
                             <th scope="col" style="width: 100px;">Total</th>
                         </tr>
                         </thead>
@@ -87,9 +87,9 @@
                             <td>
                                 <div class="checkout_btn_inner d-flex align-items-center">
                                     <a class="gray_btn" style="padding-right: 30px;padding-left: 30px;"
-                                       href="{% url 'home' %}">Continue Shopping</a>
+                                       href="{% url 'home' %}">Continuar Comprando</a>
                                     {% if product_id > 0 %}
-                                        <a class="primary-btn" href="{% url 'checkout' %}">Proceed to checkout</a>
+                                        <a class="primary-btn" href="{% url 'checkout' %}">Pagar Productos</a>
                                     {% endif %}
                                 </div>
                             </td>
